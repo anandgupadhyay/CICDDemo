@@ -47,13 +47,13 @@ jobs:
           # apply provisioning profile
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
-    - name: Build app
-          run: |
+    - name: Build
+    	run: |
             xcodebuild clean build -project CICDDemo.xcodeproj -scheme CICDDemo -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-          env: 
+		  env: 
             destination: ${{ matrix.destination }}
     - name: Test
-         run: |
-          xcodebuild clean test -project GHFollowers.xcodeproj -scheme GHFollowersTests -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-         env: 
-          destination: ${{ matrix.destination }}
+        run: |
+          xcodebuild clean test -project CICDDemo.xcodeproj -scheme CICDDemoTests -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        env: 
+         destination: ${{ matrix.destination }}

@@ -11,7 +11,7 @@ class ListViewController: UITableViewController {
     
     @IBOutlet public var listTable: UITableView!
     
-    public var devList = [["name":"Thoma Andrew","descignation":"iOS Developer","location":"Texas US"],["name":"Nency Jordan","descignation":"Technical Lead","location":"Sweden"],["name":"fentuia Donzigutia","descignation":"Implementation Head ","location":"Austria"]]
+    public var devList = [["name":"Thoma Andrew","descignation":"iOS Developer","location":"Texas US"],["name":"Nency Jordan","descignation":"Technical Lead","location":"Sweden"],["name":"fentuia Donzigutia","descignation":"Implementation Head","location":"Austria"],["name":"Jesica Lal","descignation":"Sr Mobile Tech Lead","location":"Hungry"]]
     override func viewDidLoad(){
         super.viewDidLoad()
         // Do any additional setup after loading the view.
